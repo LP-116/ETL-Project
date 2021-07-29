@@ -25,7 +25,7 @@ CREATE TABLE "Blackout_spots" (
     "Location" VARCHAR(100)   NOT NULL,
     "Lat" VARCHAR(20)   NOT NULL,
     "Lon" VARCHAR(20)   NOT NULL,
-    "Local_Governemnt_Area" VARCHAR   NOT NULL,
+    "Local_Governemnt_Area" VARCHAR(100)   NOT NULL,
     CONSTRAINT "pk_Blackout_spots" PRIMARY KEY (
         "BS_ID"
      )
@@ -71,17 +71,20 @@ CREATE TABLE "Population_density" (
 ALTER TABLE "Jurisdiction" ADD CONSTRAINT "fk_Jurisdiction_Local_Government_Area" FOREIGN KEY("Local_Government_Area")
 REFERENCES "Location_ID" ("Local_Government_Area");
 
+ALTER TABLE "Location_ID" ADD CONSTRAINT "fk_Location_ID_Local_Government_Area" FOREIGN KEY("Local_Government_Area")
+REFERENCES "Blackout_spots" ("Local_Governemnt_Area");
+
 ALTER TABLE "Blackout_spots" ADD CONSTRAINT "fk_Blackout_spots_Local_Governemnt_Area" FOREIGN KEY("Local_Governemnt_Area")
-REFERENCES "Location_ID" ("Local_Government_Area");
+REFERENCES "Jurisdiction" ("Local_Government_Area");
 
 ALTER TABLE "Population_numbers" ADD CONSTRAINT "fk_Population_numbers_LGA_code" FOREIGN KEY("LGA_code")
-REFERENCES "Location_ID" ("LGA_code");
+REFERENCES "Population_growth" ("LGA_code");
 
 ALTER TABLE "Population_growth" ADD CONSTRAINT "fk_Population_growth_LGA_code" FOREIGN KEY("LGA_code")
-REFERENCES "Location_ID" ("LGA_code");
+REFERENCES "Population_density" ("LGA_code");
 
 ALTER TABLE "Pop_growth_type" ADD CONSTRAINT "fk_Pop_growth_type_LGA_code" FOREIGN KEY("LGA_code")
-REFERENCES "Location_ID" ("LGA_code");
+REFERENCES "Population_density" ("LGA_code");
 
 ALTER TABLE "Population_density" ADD CONSTRAINT "fk_Population_density_LGA_code" FOREIGN KEY("LGA_code")
 REFERENCES "Location_ID" ("LGA_code");
