@@ -1,0 +1,44 @@
+Jurisdiction
+-
+Index PK INT
+Local_Government_Area VARCHAR(100) FK >-< Location_ID.Local_Government_Area
+Electorate VARCHAR(100)
+State VARCHAR(100)
+
+Location_ID
+-
+LGA_code INT PK
+Local_Government_Area VARCHAR(100) FK >-< Blackout_spots.Local_Governemnt_Area
+
+Blackout_spots
+-
+BS_ID INT PK
+Location VARCHAR(100)
+Lat VARCHAR(20)
+Lon VARCHAR(20)
+Local_Governemnt_Area VARCHAR(100) FK >- Jurisdiction.Local_Government_Area
+
+Population_numbers
+-
+LGA_code INT PK FK >- Population_growth.LGA_code
+pop_2018 INT
+pop_2019 INT
+
+Population_growth
+-
+LGA_code INT PK FK >- Population_density.LGA_code
+Growth_no INT
+Growth_per FLOAT(1)
+
+Pop_growth_type
+-
+LGA_code INT PK FK >- Population_density.LGA_code
+Births_no INT
+Int_migration_no INT
+OS_migration_no INT
+
+Population_density
+-
+LGA_code INT PK FK >- Location_ID.LGA_code
+LGA_area FLOAT(1)
+Pop_density FLOAT(1)
