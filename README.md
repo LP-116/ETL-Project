@@ -36,7 +36,7 @@ During the transform and loading sections, tables were created successfully in P
 
 Joins can be completed without error.
 
-<img src="https://user-images.githubusercontent.com/82348616/127962887-2907c683-2b95-46b3-99a0-cff7f4de3fb8.PNG" width="100">
+<img src="https://user-images.githubusercontent.com/82348616/127962887-2907c683-2b95-46b3-99a0-cff7f4de3fb8.PNG" width="500">
 
 ---
 ### Sources
