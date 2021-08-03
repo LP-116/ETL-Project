@@ -47,7 +47,10 @@ Population data: https://www.abs.gov.au/statistics/people/population/regional-po
 
 ---
 ### Files
-In the main branch in this repository there is the ETL Project Report in PDF format and a folder containing the code used to complete the project.
+In the main branch of this repository the ETL Project Report is available in PDF and word format.
+
+This is also a folder containing the code used to complete the project.
+
 Please note: The code requires links to csv's that are not located on the main branch. For code to run correctly the csv files will need to be extracted from the branch titled "Nathan". This project did not require the code to be included in submission.
 
 
