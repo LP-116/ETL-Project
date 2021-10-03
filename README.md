@@ -42,6 +42,7 @@ Joins can be completed without error.
 ### Sources
 
 The datasources used in the report can be found below:
+
 Blackspot data: https://data.gov.au/data/dataset/community-reports-of-poor-or-no-mobile-coverage/resource/c6b211ad-3aa2-4f53-8427-01b52a6433a7?inner_span=True
 
 Population data: https://www.abs.gov.au/statistics/people/population/regional-population/2018-19#data-download
