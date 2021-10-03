@@ -1,6 +1,6 @@
 # ETL-Project
 ## Extract, Transform, Load Project
-## Team members: Nathan Potter and Leanne Porter
+### Team members: Nathan Potter and Leanne Porter
 
 ---
 ### Task
